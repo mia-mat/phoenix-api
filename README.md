@@ -1,4 +1,5 @@
 # Phoenix  API
+[![Latest](https://img.shields.io/nexus/r/ws.mia/phoenix-api?server=https://parthenon.mia.ws&label=latest)](https://parthenon.mia.ws/#browse/browse:maven-releases:ws%2Fmia%2Fphoenix-api)  
 Models and HTTP client for [Phoenix](https://gh.mia.ws/phoenix-core).
 
 ## Download
