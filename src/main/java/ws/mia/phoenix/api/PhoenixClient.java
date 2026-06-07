@@ -31,4 +31,6 @@ public interface PhoenixClient {
 
 	boolean ping();
 
+	String getVersion();
+
 }

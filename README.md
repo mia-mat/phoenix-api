@@ -17,7 +17,7 @@ Models and HTTP client for [Phoenix](https://gh.mia.ws/phoenix-core).
     <dependency>
         <groupId>ws.mia</groupId>
         <artifactId>phoenix-api</artifactId>
-        <version>1.2.6</version>
+        <version>1.2.7</version>
     </dependency>
 </dependencies>
 ```
@@ -29,7 +29,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'ws.mia:phoenix-api:1.2.6'
+    implementation 'ws.mia:phoenix-api:1.2.7'
 }
 ```
 

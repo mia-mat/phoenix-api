@@ -289,6 +289,27 @@ public class PhoenixHttpClient implements PhoenixClient {
 		}
 	}
 
+	@Override
+	public String getVersion() {
+		try {
+			HttpRequest request = getAuthorizedBuilder("version")
+					.GET()
+					.header("Accept", "text/plain")
+					.build();
+
+			HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+
+			if (isSuccess(response.statusCode())) {
+				return response.body();
+			}
+
+			throw objectMapper.readValue(response.body(), PhoenixServerException.class);
+		} catch (IOException | InterruptedException e) {
+			Thread.currentThread().interrupt();
+			throw new PhoenixClientException("Failed to get version", e);
+		}
+	}
+
 	private String urlEncode(String value) {
 		return URLEncoder.encode(value, StandardCharsets.UTF_8);
 	}
