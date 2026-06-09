@@ -36,6 +36,6 @@ dependencies {
 ## Usage
 
 ```java
-PhoenixHttpClient client = new PhoenixHttpClient("https://phoenix.example.com");
+PhoenixClient client = new PhoenixHttpClient("https://phoenix.example.com");
 List<Route> routes = client.getRoutes();
 ```
